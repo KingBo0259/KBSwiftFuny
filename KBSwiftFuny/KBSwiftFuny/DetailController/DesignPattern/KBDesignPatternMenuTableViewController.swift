@@ -9,9 +9,14 @@
 import UIKit
 
 class KBDesignPatternMenuTableViewController: UITableViewController {
+    
+    let patternMenus = ["单例模式","代理模式","策略模式","抽象工程模式","观察者模式","外观模式"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title="设计模式列表"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,23 +34,32 @@ class KBDesignPatternMenuTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return patternMenus.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        
+        let reuseIdentifier = "reuseIdentifier"
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier)
 
         // Configure the cell...
+        if cell==nil {
+            cell=UITableViewCell.init(style: UITableViewCellStyle.Value1, reuseIdentifier: reuseIdentifier)
+            cell?.accessoryType=UITableViewCellAccessoryType.DisclosureIndicator
+        }
 
-        return cell
+        cell!.textLabel?.text=patternMenus[indexPath.row]
+        return cell!
     }
-    */
+
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -16,6 +16,7 @@
 		A96F6DC51D3CB76F00DFC869 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96F6DC31D3CB76F00DFC869 /* LaunchScreen.storyboard */; };
 		A96F6DD01D3CB76F00DFC869 /* KBSwiftFunyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F6DCF1D3CB76F00DFC869 /* KBSwiftFunyTests.swift */; };
 		A96F6DDB1D3CB76F00DFC869 /* KBSwiftFunyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F6DDA1D3CB76F00DFC869 /* KBSwiftFunyUITests.swift */; };
+		A96F6DEB1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F6DEA1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A96F6DD61D3CB76F00DFC869 /* KBSwiftFunyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KBSwiftFunyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96F6DDA1D3CB76F00DFC869 /* KBSwiftFunyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBSwiftFunyUITests.swift; sourceTree = "<group>"; };
 		A96F6DDC1D3CB76F00DFC869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A96F6DEA1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBDesignPatternMenuTableViewController.swift; path = DetailController/DesignPattern/KBDesignPatternMenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		A96F6DB41D3CB76F00DFC869 /* KBSwiftFuny */ = {
 			isa = PBXGroup;
 			children = (
+				A96F6DE81D3CBEE100DFC869 /* DetailController */,
 				A96F6DB51D3CB76F00DFC869 /* AppDelegate.swift */,
 				A96F6DBA1D3CB76F00DFC869 /* MasterViewController.swift */,
 				A96F6DBC1D3CB76F00DFC869 /* DetailViewController.swift */,
@@ -129,6 +132,22 @@
 				A96F6DDC1D3CB76F00DFC869 /* Info.plist */,
 			);
 			path = KBSwiftFunyUITests;
+			sourceTree = "<group>";
+		};
+		A96F6DE81D3CBEE100DFC869 /* DetailController */ = {
+			isa = PBXGroup;
+			children = (
+				A96F6DE91D3CBEF300DFC869 /* DesignPattern */,
+			);
+			name = DetailController;
+			sourceTree = "<group>";
+		};
+		A96F6DE91D3CBEF300DFC869 /* DesignPattern */ = {
+			isa = PBXGroup;
+			children = (
+				A96F6DEA1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift */,
+			);
+			name = DesignPattern;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +283,7 @@
 			files = (
 				A96F6DB91D3CB76F00DFC869 /* KBSwiftFuny.xcdatamodeld in Sources */,
 				A96F6DB61D3CB76F00DFC869 /* AppDelegate.swift in Sources */,
+				A96F6DEB1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift in Sources */,
 				A96F6DBB1D3CB76F00DFC869 /* MasterViewController.swift in Sources */,
 				A96F6DBD1D3CB76F00DFC869 /* DetailViewController.swift in Sources */,
 			);

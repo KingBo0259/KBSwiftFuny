@@ -19,6 +19,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
+        self.initData();
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(insertNewObject(_:)))
         self.navigationItem.rightBarButtonItem = addButton
@@ -36,6 +38,52 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func initData() {
+        
+        let menus=["设计模式"];
+        
+        let sectionInfo = self.fetchedResultsController.sections![0];
+        
+        if (sectionInfo.numberOfObjects==menus.count) {
+            
+        }else{
+            
+            let context = self.fetchedResultsController.managedObjectContext
+            let entity = self.fetchedResultsController.fetchRequest.entity!
+
+            //删除所有数据
+            for item in  self.fetchedResultsController.fetchedObjects! {
+                context.deleteObject(item as! NSManagedObject)
+            }
+            
+
+            for  menu in menus {
+            let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context)
+                
+                
+
+            
+            // If appropriate, configure the new managed object.
+            // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+            newManagedObject.setValue(menu, forKey: "timeStamp")
+            }
+            
+            // Save the context.
+            do {
+                try context.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                //print("Unresolved error \(error), \(error.userInfo)")
+                abort()
+            }
+        
+        }
+        
+        
     }
 
     func insertNewObject(sender: AnyObject) {
@@ -110,8 +158,22 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             }
         }
     }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        switch indexPath.row {
+        case 0:
+
+            self.navigationController?.pushViewController(KBDesignPatternMenuTableViewController(), animated: true);
+            break;
+            
+        default:
+            break;
+            
+        }
+    }
 
     func configureCell(cell: UITableViewCell, withObject object: NSManagedObject) {
+        cell.accessoryType=UITableViewCellAccessoryType.DisclosureIndicator
         cell.textLabel!.text = object.valueForKey("timeStamp")!.description
     }
 
