@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7428D4FBF00F67B7A82A2CCFCEC655977BF57EDF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7428D4FBF00F67B7A82A2CCFCEC655977BF57EDF" : 0,
+    "D54B729C582F080BCDF0D439957405A3DA9D907D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0CDB8E35-C9D6-469A-B787-281EC5414BCD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7428D4FBF00F67B7A82A2CCFCEC655977BF57EDF" : "KBSwiftFuny\/",
+    "D54B729C582F080BCDF0D439957405A3DA9D907D" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "KBSwiftFuny",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "KBSwiftFuny\/KBSwiftFuny.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/KingBo0259\/KBSwiftFuny",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7428D4FBF00F67B7A82A2CCFCEC655977BF57EDF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/KingBo0259\/KBFuny",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D54B729C582F080BCDF0D439957405A3DA9D907D"
+    }
+  ]
+}
