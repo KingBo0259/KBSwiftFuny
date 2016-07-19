@@ -163,7 +163,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         switch indexPath.row {
         case 0:
 
-            self.navigationController?.pushViewController(KBDesignPatternMenuTableViewController(), animated: true);
+            self.navigationController?.pushViewController(KBDesignPatternMenuTableViewController(style:UITableViewStyle.Grouped), animated: true);
             break;
             
         default:

@@ -10,21 +10,58 @@ import UIKit
 
 class KBDesignPatternMenuTableViewController: UITableViewController {
     
-    let patternMenus = ["单例模式","代理模式","策略模式","抽象工程模式","观察者模式","外观模式"]
+    
     
 
+    let groups = ["创建型模式(5种)","结构型模式（7种）","行为型模式(11种)"]
+    
+    let patternMenus = [["工厂方法模式","抽象工厂模式","单例模式","建造者模式","原型模式"]
+                        ,["适配器模式","装饰器模式","代理模式","外观模式","桥接模式","组合模式","享元模式"]
+                        ,["策略模式","模板方法模式","观察者模式","迭代子模式","责任链模式","命令模式","备忘录模式","状态模式","访问者模式","中介者模式","解释器模式"]]
+    
+
+    
+    override init(style: UITableViewStyle) {
+        super.init(style: style)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title="设计模式列表"
+        
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.tableView.tableHeaderView=headView;
+        
     }
 
+    
+   var headView:UIView {
+    let tempView=UIView()
+    tempView.backgroundColor=UIColor.yellowColor()
+    tempView.frame=CGRectMake(0, 0,CGRectGetWidth( self.view.frame), 200)
+    
+    
+    //设计模式
+    let descrptionLabel=UILabel()
+    descrptionLabel.frame=CGRectMake(0, 0,CGRectGetWidth( self.view.frame), 200)
+    descrptionLabel.textColor=UIColor.blackColor()
+    descrptionLabel.textAlignment=NSTextAlignment.Left
+    descrptionLabel.numberOfLines=0
+    descrptionLabel.text="设计模式的六大原则.\n\r 1、单一职责原则.\n2、里氏替换原则（Liskov Substitution Principle）\n3、依赖倒转原则（Dependence Inversion Principle）.\n4、接口隔离原则（Interface Segregation Principle）.\n5、迪米特法则（最少知道原则）（Demeter Principle）\n6、合成复用原则（Composite Reuse Principle）"
+    tempView.addSubview(descrptionLabel)
+    return tempView;
+    
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,12 +71,12 @@ class KBDesignPatternMenuTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return groups.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return patternMenus.count
+        return patternMenus[section].count
     }
 
     
@@ -55,55 +92,15 @@ class KBDesignPatternMenuTableViewController: UITableViewController {
             cell?.accessoryType=UITableViewCellAccessoryType.DisclosureIndicator
         }
 
-        cell!.textLabel?.text=patternMenus[indexPath.row]
+        cell!.textLabel?.text=patternMenus[indexPath.section][indexPath.row]
         return cell!
     }
 
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return groups[section]
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
