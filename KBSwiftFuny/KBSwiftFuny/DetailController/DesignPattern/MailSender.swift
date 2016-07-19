@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+
+class MailSender:SenderProtocol {
+    
+    func sendMessage(message: String) {
+        print("mail Sender:\(message)")
+
+    }
+}

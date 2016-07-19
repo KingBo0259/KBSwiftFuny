@@ -17,6 +17,12 @@
 		A96F6DD01D3CB76F00DFC869 /* KBSwiftFunyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F6DCF1D3CB76F00DFC869 /* KBSwiftFunyTests.swift */; };
 		A96F6DDB1D3CB76F00DFC869 /* KBSwiftFunyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F6DDA1D3CB76F00DFC869 /* KBSwiftFunyUITests.swift */; };
 		A96F6DEB1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F6DEA1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift */; };
+		A9C9AFD01D3E43F800B705F9 /* SenderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFCF1D3E43F800B705F9 /* SenderProtocol.swift */; };
+		A9C9AFD21D3E466E00B705F9 /* MailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFD11D3E466E00B705F9 /* MailSender.swift */; };
+		A9C9AFD41D3E46ED00B705F9 /* MSNSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFD31D3E46ED00B705F9 /* MSNSender.swift */; };
+		A9C9AFD61D3E478800B705F9 /* QQSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFD51D3E478800B705F9 /* QQSender.swift */; };
+		A9C9AFD81D3E47E800B705F9 /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFD71D3E47E800B705F9 /* SimpleFactory.swift */; };
+		A9C9AFDA1D3E4B2300B705F9 /* SimpleFactoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFD91D3E4B2300B705F9 /* SimpleFactoryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		A96F6DDA1D3CB76F00DFC869 /* KBSwiftFunyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBSwiftFunyUITests.swift; sourceTree = "<group>"; };
 		A96F6DDC1D3CB76F00DFC869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A96F6DEA1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KBDesignPatternMenuTableViewController.swift; path = DetailController/DesignPattern/KBDesignPatternMenuTableViewController.swift; sourceTree = "<group>"; };
+		A9C9AFCF1D3E43F800B705F9 /* SenderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SenderProtocol.swift; path = DetailController/DesignPattern/SimpleFactory/SenderProtocol.swift; sourceTree = "<group>"; };
+		A9C9AFD11D3E466E00B705F9 /* MailSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailSender.swift; path = DetailController/DesignPattern/MailSender.swift; sourceTree = "<group>"; };
+		A9C9AFD31D3E46ED00B705F9 /* MSNSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSNSender.swift; path = DetailController/DesignPattern/SimpleFactory/MSNSender.swift; sourceTree = "<group>"; };
+		A9C9AFD51D3E478800B705F9 /* QQSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQSender.swift; sourceTree = "<group>"; };
+		A9C9AFD71D3E47E800B705F9 /* SimpleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleFactory.swift; path = DetailController/DesignPattern/SimpleFactory/SimpleFactory.swift; sourceTree = "<group>"; };
+		A9C9AFD91D3E4B2300B705F9 /* SimpleFactoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleFactoryController.swift; path = DetailController/DesignPattern/SimpleFactory/SimpleFactoryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,9 +157,23 @@
 		A96F6DE91D3CBEF300DFC869 /* DesignPattern */ = {
 			isa = PBXGroup;
 			children = (
+				A9C9AFCA1D3E41C400B705F9 /* SimpleFactory */,
 				A96F6DEA1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift */,
 			);
 			name = DesignPattern;
+			sourceTree = "<group>";
+		};
+		A9C9AFCA1D3E41C400B705F9 /* SimpleFactory */ = {
+			isa = PBXGroup;
+			children = (
+				A9C9AFCF1D3E43F800B705F9 /* SenderProtocol.swift */,
+				A9C9AFD11D3E466E00B705F9 /* MailSender.swift */,
+				A9C9AFD31D3E46ED00B705F9 /* MSNSender.swift */,
+				A9C9AFD51D3E478800B705F9 /* QQSender.swift */,
+				A9C9AFD71D3E47E800B705F9 /* SimpleFactory.swift */,
+				A9C9AFD91D3E4B2300B705F9 /* SimpleFactoryController.swift */,
+			);
+			name = SimpleFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +308,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96F6DB91D3CB76F00DFC869 /* KBSwiftFuny.xcdatamodeld in Sources */,
+				A9C9AFD41D3E46ED00B705F9 /* MSNSender.swift in Sources */,
+				A9C9AFD81D3E47E800B705F9 /* SimpleFactory.swift in Sources */,
 				A96F6DB61D3CB76F00DFC869 /* AppDelegate.swift in Sources */,
 				A96F6DEB1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift in Sources */,
+				A9C9AFD21D3E466E00B705F9 /* MailSender.swift in Sources */,
+				A9C9AFD61D3E478800B705F9 /* QQSender.swift in Sources */,
 				A96F6DBB1D3CB76F00DFC869 /* MasterViewController.swift in Sources */,
+				A9C9AFD01D3E43F800B705F9 /* SenderProtocol.swift in Sources */,
+				A9C9AFDA1D3E4B2300B705F9 /* SimpleFactoryController.swift in Sources */,
 				A96F6DBD1D3CB76F00DFC869 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +542,7 @@
 				A96F6DE11D3CB76F00DFC869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A96F6DE21D3CB76F00DFC869 /* Build configuration list for PBXNativeTarget "KBSwiftFunyTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +551,7 @@
 				A96F6DE41D3CB76F00DFC869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A96F6DE51D3CB76F00DFC869 /* Build configuration list for PBXNativeTarget "KBSwiftFunyUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +560,7 @@
 				A96F6DE71D3CB76F00DFC869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

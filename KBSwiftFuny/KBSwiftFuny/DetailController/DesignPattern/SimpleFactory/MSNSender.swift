@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class MSNSender:SenderProtocol {
+    
+    func sendMessage(message: String) {
+        print("MSN Sender:\(message)")
+        
+    }
+}

@@ -7,3 +7,10 @@
 //
 
 import Foundation
+class QQSender:SenderProtocol {
+    
+    func sendMessage(message: String) {
+        print("QQ Sender:\(message)")
+        
+    }
+}
