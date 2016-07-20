@@ -29,8 +29,8 @@ class SimpleFactory {
     }
     
     
-    func senderMessage(messge:String)  {
-        sender.sendMessage(messge)
+    func senderMessage(messge:String) ->String? {
+      return  sender.sendMessage(messge)
     }
     
 }

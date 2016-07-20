@@ -10,8 +10,8 @@ import Foundation
 
 class MSNSender:SenderProtocol {
     
-    func sendMessage(message: String) {
-        print("MSN Sender:\(message)")
+    func sendMessage(message: String)->String {
+        return "MSN Sender:\(message)"
         
     }
 }

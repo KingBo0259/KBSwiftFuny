@@ -11,8 +11,7 @@ import Foundation
 
 class MailSender:SenderProtocol {
     
-    func sendMessage(message: String) {
-        print("mail Sender:\(message)")
-
+    func sendMessage(message: String)->String {
+        return "mail Sender:\(message)"
     }
 }

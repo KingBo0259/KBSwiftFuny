@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol  SenderProtocol{
-    func sendMessage(message:String)
+    func sendMessage(message:String)->String
 }

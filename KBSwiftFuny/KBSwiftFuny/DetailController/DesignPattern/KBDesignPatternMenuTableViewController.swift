@@ -116,12 +116,17 @@ class KBDesignPatternMenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-//        if (indexPath.section>controls.count-1) {
-//            return;
-//        }
-//        let arry :NSArray=controls.objectAtIndex(indexPath.section);
-//        let controller=controls[indexPath.section][indexPath.row];
-        self.navigationController?.pushViewController(SimpleFactoryController(), animated: true)
+        if (indexPath.section>controls.count-1) {
+            return
+        }
+    
+        let arry=controls.objectAtIndex(indexPath.section) as? NSArray;
+        if (arry==nil||indexPath.row>arry!.count-1){
+            return
+        }
+        
+        let controller=arry?[indexPath.row] as! UIViewController;
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 
 }

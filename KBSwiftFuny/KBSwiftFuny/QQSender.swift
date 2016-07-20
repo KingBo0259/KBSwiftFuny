@@ -9,8 +9,9 @@
 import Foundation
 class QQSender:SenderProtocol {
     
-    func sendMessage(message: String) {
-        print("QQ Sender:\(message)")
+    func sendMessage(message: String)->String {
+        return "QQ Sender:\(message)"
+
         
     }
 }
