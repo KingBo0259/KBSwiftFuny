@@ -115,6 +115,7 @@ class KBDesignPatternMenuTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         if (indexPath.section>controls.count-1) {
             return
