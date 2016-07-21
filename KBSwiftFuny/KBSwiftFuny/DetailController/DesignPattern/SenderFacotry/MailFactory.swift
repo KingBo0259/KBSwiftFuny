@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class MailFactory: Provider {
+    override func product() -> Sender? {
+        return MailSender()
+    }
+}

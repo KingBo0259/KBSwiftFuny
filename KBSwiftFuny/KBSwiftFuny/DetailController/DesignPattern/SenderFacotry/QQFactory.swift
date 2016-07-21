@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class QQFactory: Provider {
+    override func product() -> Sender? {
+        return QQSender()
+    }
+}

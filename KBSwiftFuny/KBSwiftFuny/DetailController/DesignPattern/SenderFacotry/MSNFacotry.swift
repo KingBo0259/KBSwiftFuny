@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class MSNFactory: Provider {
+    override func product() -> Sender? {
+        return MSNSender()
+    }
+}

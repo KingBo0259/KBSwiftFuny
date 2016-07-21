@@ -7,11 +7,9 @@
 //
 
 import Foundation
-class QQSender:SenderProtocol {
+class QQSender:Sender {
     
-    func sendMessage(message: String)->String {
-        return "QQ Sender:\(message)"
-
-        
+  override  func sendMessage(message: String)->String {
+        return "QQ Sender:\(message)"        
     }
 }

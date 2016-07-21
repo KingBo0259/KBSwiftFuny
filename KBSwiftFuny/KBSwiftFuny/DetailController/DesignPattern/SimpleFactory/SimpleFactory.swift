@@ -16,6 +16,7 @@ enum SenderType {
 class SimpleFactory {
 
     var sender:SenderProtocol
+    //简单工程其实这里存在着扩展问题，若添加一个类 则需要更改 改类的方法，则违背了 开闭原则－－>工厂方法来进行更改
     init(senderType:SenderType){
         
         switch senderType {
@@ -30,7 +31,7 @@ class SimpleFactory {
     
     
     func senderMessage(messge:String) ->String? {
-      return  sender.sendMessage(messge)
+      return "简单工厂" + sender.sendMessage(messge)
     }
     
 }

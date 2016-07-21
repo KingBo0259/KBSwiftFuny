@@ -23,6 +23,11 @@
 		A9C9AFD61D3E478800B705F9 /* QQSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFD51D3E478800B705F9 /* QQSender.swift */; };
 		A9C9AFD81D3E47E800B705F9 /* SimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFD71D3E47E800B705F9 /* SimpleFactory.swift */; };
 		A9C9AFDA1D3E4B2300B705F9 /* SimpleFactoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFD91D3E4B2300B705F9 /* SimpleFactoryController.swift */; };
+		A9C9AFE71D40AFA600B705F9 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFE61D40AFA600B705F9 /* Sender.swift */; };
+		A9C9AFEA1D40B12100B705F9 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFE91D40B12100B705F9 /* Provider.swift */; };
+		A9C9AFEC1D40B57B00B705F9 /* MailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFEB1D40B57B00B705F9 /* MailFactory.swift */; };
+		A9C9AFEE1D40B5B600B705F9 /* MSNFacotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFED1D40B5B600B705F9 /* MSNFacotry.swift */; };
+		A9C9AFF01D40B5F800B705F9 /* QQFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFEF1D40B5F800B705F9 /* QQFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +70,11 @@
 		A9C9AFD51D3E478800B705F9 /* QQSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQSender.swift; sourceTree = "<group>"; };
 		A9C9AFD71D3E47E800B705F9 /* SimpleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleFactory.swift; path = DetailController/DesignPattern/SimpleFactory/SimpleFactory.swift; sourceTree = "<group>"; };
 		A9C9AFD91D3E4B2300B705F9 /* SimpleFactoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleFactoryController.swift; path = DetailController/DesignPattern/SimpleFactory/SimpleFactoryController.swift; sourceTree = "<group>"; };
+		A9C9AFE61D40AFA600B705F9 /* Sender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sender.swift; path = DetailController/DesignPattern/SimpleFactory/Sender.swift; sourceTree = "<group>"; };
+		A9C9AFE91D40B12100B705F9 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Provider.swift; path = DetailController/DesignPattern/SenderFacotry/Provider.swift; sourceTree = "<group>"; };
+		A9C9AFEB1D40B57B00B705F9 /* MailFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailFactory.swift; path = DetailController/DesignPattern/SenderFacotry/MailFactory.swift; sourceTree = "<group>"; };
+		A9C9AFED1D40B5B600B705F9 /* MSNFacotry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSNFacotry.swift; path = DetailController/DesignPattern/SenderFacotry/MSNFacotry.swift; sourceTree = "<group>"; };
+		A9C9AFEF1D40B5F800B705F9 /* QQFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QQFactory.swift; path = DetailController/DesignPattern/SenderFacotry/QQFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,14 +176,27 @@
 		A9C9AFCA1D3E41C400B705F9 /* SimpleFactory */ = {
 			isa = PBXGroup;
 			children = (
+				A9C9AFE81D40B0EA00B705F9 /* SenderFactory */,
 				A9C9AFCF1D3E43F800B705F9 /* SenderProtocol.swift */,
 				A9C9AFD11D3E466E00B705F9 /* MailSender.swift */,
 				A9C9AFD31D3E46ED00B705F9 /* MSNSender.swift */,
 				A9C9AFD51D3E478800B705F9 /* QQSender.swift */,
 				A9C9AFD71D3E47E800B705F9 /* SimpleFactory.swift */,
 				A9C9AFD91D3E4B2300B705F9 /* SimpleFactoryController.swift */,
+				A9C9AFE61D40AFA600B705F9 /* Sender.swift */,
 			);
 			name = SimpleFactory;
+			sourceTree = "<group>";
+		};
+		A9C9AFE81D40B0EA00B705F9 /* SenderFactory */ = {
+			isa = PBXGroup;
+			children = (
+				A9C9AFE91D40B12100B705F9 /* Provider.swift */,
+				A9C9AFEB1D40B57B00B705F9 /* MailFactory.swift */,
+				A9C9AFED1D40B5B600B705F9 /* MSNFacotry.swift */,
+				A9C9AFEF1D40B5F800B705F9 /* QQFactory.swift */,
+			);
+			name = SenderFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,13 +331,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96F6DB91D3CB76F00DFC869 /* KBSwiftFuny.xcdatamodeld in Sources */,
+				A9C9AFEC1D40B57B00B705F9 /* MailFactory.swift in Sources */,
 				A9C9AFD41D3E46ED00B705F9 /* MSNSender.swift in Sources */,
 				A9C9AFD81D3E47E800B705F9 /* SimpleFactory.swift in Sources */,
+				A9C9AFF01D40B5F800B705F9 /* QQFactory.swift in Sources */,
 				A96F6DB61D3CB76F00DFC869 /* AppDelegate.swift in Sources */,
+				A9C9AFE71D40AFA600B705F9 /* Sender.swift in Sources */,
 				A96F6DEB1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift in Sources */,
+				A9C9AFEE1D40B5B600B705F9 /* MSNFacotry.swift in Sources */,
 				A9C9AFD21D3E466E00B705F9 /* MailSender.swift in Sources */,
 				A9C9AFD61D3E478800B705F9 /* QQSender.swift in Sources */,
 				A96F6DBB1D3CB76F00DFC869 /* MasterViewController.swift in Sources */,
+				A9C9AFEA1D40B12100B705F9 /* Provider.swift in Sources */,
 				A9C9AFD01D3E43F800B705F9 /* SenderProtocol.swift in Sources */,
 				A9C9AFDA1D3E4B2300B705F9 /* SimpleFactoryController.swift in Sources */,
 				A96F6DBD1D3CB76F00DFC869 /* DetailViewController.swift in Sources */,

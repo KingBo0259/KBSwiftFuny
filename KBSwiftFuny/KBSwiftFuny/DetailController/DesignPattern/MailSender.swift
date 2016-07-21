@@ -9,9 +9,11 @@
 import Foundation
 
 
-class MailSender:SenderProtocol {
+class MailSender:Sender {
     
-    func sendMessage(message: String)->String {
+    //final  表示子类不可以进重写
+   override final func  sendMessage(message: String)->String {
+    
         return "mail Sender:\(message)"
     }
 }

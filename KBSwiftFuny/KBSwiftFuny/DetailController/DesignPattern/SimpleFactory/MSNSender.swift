@@ -8,9 +8,9 @@
 
 import Foundation
 
-class MSNSender:SenderProtocol {
+class MSNSender:Sender {
     
-    func sendMessage(message: String)->String {
+    override func  sendMessage(message: String)->String {
         return "MSN Sender:\(message)"
         
     }

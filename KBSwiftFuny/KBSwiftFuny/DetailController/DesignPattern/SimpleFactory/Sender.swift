@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class Sender :SenderProtocol{
+    
+    func sendMessage(message: String) -> String {
+     return "Sender Base"
+    }
+}

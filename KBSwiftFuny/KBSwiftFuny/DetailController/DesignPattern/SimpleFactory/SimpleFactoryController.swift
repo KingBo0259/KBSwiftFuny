@@ -8,9 +8,6 @@
 
 import UIKit
 
-
-
-
 class SimpleFactoryController: UIViewController {
     
     
@@ -18,17 +15,21 @@ class SimpleFactoryController: UIViewController {
     var messagetextField:UITextField?
     var messageLabel:UILabel?
     
+    
+    var simpleFlag:Bool=true
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title="工厂方法"
+        
         self.view.backgroundColor=UIColor.whiteColor()
-        var width:CGFloat=120.0,height:CGFloat=60.0,top:CGFloat=100.0;
+        var width:CGFloat=90.0,height:CGFloat=60.0,top:CGFloat=100.0;
         
         let messageText = UITextField()
-        messageText.frame=CGRectMake(100, top, 200, 40)
+        messageText.frame=CGRectMake(10, top, 200, 40)
         messageText.placeholder="请输入消息"
     
         messageText.borderStyle=UITextBorderStyle.RoundedRect
@@ -39,7 +40,7 @@ class SimpleFactoryController: UIViewController {
         top+=45
         let messageLabel = UILabel()
         self.messageLabel=messageLabel
-        messageLabel.frame=CGRectMake(100, top, 200, 40)
+        messageLabel.frame=CGRectMake(10, top, 300, 40)
         messageLabel.textColor=UIColor.blackColor()
         messageLabel.text="我是输出结果的Label"
         self.view.addSubview(messageLabel)
@@ -75,22 +76,65 @@ class SimpleFactoryController: UIViewController {
         self.view.addSubview(msnButton)
         
         
+
+        top+=45
+        
+        let switchButton=UIButton()
+        switchButton.frame=CGRectMake(10,top, 200, height)
+        switchButton.setTitle("切换成工厂方法", forState: UIControlState.Normal)
+        switchButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        switchButton.addTarget(self, action:#selector(switchClick(_:)) , forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(switchButton)
+
+        
     }
     
+    func switchClick(sender:UIButton) {
+        simpleFlag = !simpleFlag
+        
+        sender.setTitle(simpleFlag ? "切换成工厂方法":"切换成简单工厂", forState: UIControlState.Normal)
+    }
     
     func mailClick(sender:UIButton)  {
-       let message:String?=(SimpleFactory(senderType: SenderType.Mail)).senderMessage(messagetextField!.text!)
+        
+        self.messagetextField?.resignFirstResponder()
+        var message:String?
+        if simpleFlag {
+            message = (SimpleFactory(senderType: SenderType.Mail)).senderMessage(messagetextField!.text!)
+        }else{
+            let mySender=MailFactory().product()
+            message = mySender?.sendMessage(messagetextField!.text!)
+        }
        self.messageLabel?.text=message
     }
     
     func qqClick(qq sender:UIButton)  {
-       let message = SimpleFactory(senderType: SenderType.QQ).senderMessage(messagetextField!.text!)
+        self.messagetextField?.resignFirstResponder()
+        var  message:String?
+        if simpleFlag {
+            message = SimpleFactory(senderType: SenderType.QQ).senderMessage(messagetextField!.text!)
+        }else{
+        
+            let mySender=QQFactory().product()
+            message = mySender?.sendMessage(messagetextField!.text!)
+        }
         self.messageLabel?.text=message
 
     }
     
     func msnClick(msn sender:UIButton)  {
-       let message = SimpleFactory(senderType: SenderType.MSN).senderMessage(messagetextField!.text!)
+        self.messagetextField?.resignFirstResponder()
+        var  message:String?
+
+        if simpleFlag {
+             message = SimpleFactory(senderType: SenderType.MSN).senderMessage(messagetextField!.text!)
+
+        }else{
+            
+            let mySender=MSNFactory().product()
+            message = mySender?.sendMessage(messagetextField!.text!)
+        }
+
         self.messageLabel?.text=message
     }
 
