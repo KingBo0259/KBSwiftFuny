@@ -11,7 +11,7 @@ import UIKit
 class KBDesignPatternMenuTableViewController: UITableViewController {
     
     
-    
+
 
     let groups = ["创建型模式(5种)","结构型模式（7种）","行为型模式(11种)"]
     
@@ -117,17 +117,38 @@ class KBDesignPatternMenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        if (indexPath.section>controls.count-1) {
-            return
-        }
-    
-        let arry=controls.objectAtIndex(indexPath.section) as? NSArray;
-        if (arry==nil||indexPath.row>arry!.count-1){
-            return
+        var controller:UIViewController?
+        switch indexPath.section {
+            
+        case 0:
+            
+            switch indexPath.row {
+            case 0:
+                controller=SimpleFactoryController() //工厂方法
+                break
+            case 2:
+                controller=SingletonController()//单例方法
+                break
+            default:break
+        
+            }
+            
+            break
+            
+        case 1:
+            
+            break
+        case 2:
+            break
+        default:
+            break
         }
         
-        let controller=arry?[indexPath.row] as! UIViewController;
-        self.navigationController?.pushViewController(controller, animated: true)
+        if controller==nil {
+            return
+        }
+       
+        self.navigationController?.pushViewController(controller!, animated: true)
     }
 
 }

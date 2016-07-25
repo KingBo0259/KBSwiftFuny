@@ -28,6 +28,8 @@
 		A9C9AFEC1D40B57B00B705F9 /* MailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFEB1D40B57B00B705F9 /* MailFactory.swift */; };
 		A9C9AFEE1D40B5B600B705F9 /* MSNFacotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFED1D40B5B600B705F9 /* MSNFacotry.swift */; };
 		A9C9AFF01D40B5F800B705F9 /* QQFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9AFEF1D40B5F800B705F9 /* QQFactory.swift */; };
+		A9FEFC291D41C09F00E830F2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FEFC281D41C09F00E830F2 /* Singleton.swift */; };
+		A9FEFC2B1D41C0C300E830F2 /* SingletonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FEFC2A1D41C0C300E830F2 /* SingletonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		A9C9AFEB1D40B57B00B705F9 /* MailFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailFactory.swift; path = DetailController/DesignPattern/SenderFacotry/MailFactory.swift; sourceTree = "<group>"; };
 		A9C9AFED1D40B5B600B705F9 /* MSNFacotry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSNFacotry.swift; path = DetailController/DesignPattern/SenderFacotry/MSNFacotry.swift; sourceTree = "<group>"; };
 		A9C9AFEF1D40B5F800B705F9 /* QQFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QQFactory.swift; path = DetailController/DesignPattern/SenderFacotry/QQFactory.swift; sourceTree = "<group>"; };
+		A9FEFC281D41C09F00E830F2 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Singleton.swift; path = DetailController/DesignPattern/Singleton/Singleton.swift; sourceTree = "<group>"; };
+		A9FEFC2A1D41C0C300E830F2 /* SingletonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingletonController.swift; path = DetailController/DesignPattern/Singleton/SingletonController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 		A96F6DE91D3CBEF300DFC869 /* DesignPattern */ = {
 			isa = PBXGroup;
 			children = (
+				A9FEFC271D41C06700E830F2 /* Singleton */,
 				A9C9AFCA1D3E41C400B705F9 /* SimpleFactory */,
 				A96F6DEA1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift */,
 			);
@@ -197,6 +202,15 @@
 				A9C9AFEF1D40B5F800B705F9 /* QQFactory.swift */,
 			);
 			name = SenderFactory;
+			sourceTree = "<group>";
+		};
+		A9FEFC271D41C06700E830F2 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				A9FEFC281D41C09F00E830F2 /* Singleton.swift */,
+				A9FEFC2A1D41C0C300E830F2 /* SingletonController.swift */,
+			);
+			name = Singleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,12 +353,14 @@
 				A9C9AFE71D40AFA600B705F9 /* Sender.swift in Sources */,
 				A96F6DEB1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift in Sources */,
 				A9C9AFEE1D40B5B600B705F9 /* MSNFacotry.swift in Sources */,
+				A9FEFC2B1D41C0C300E830F2 /* SingletonController.swift in Sources */,
 				A9C9AFD21D3E466E00B705F9 /* MailSender.swift in Sources */,
 				A9C9AFD61D3E478800B705F9 /* QQSender.swift in Sources */,
 				A96F6DBB1D3CB76F00DFC869 /* MasterViewController.swift in Sources */,
 				A9C9AFEA1D40B12100B705F9 /* Provider.swift in Sources */,
 				A9C9AFD01D3E43F800B705F9 /* SenderProtocol.swift in Sources */,
 				A9C9AFDA1D3E4B2300B705F9 /* SimpleFactoryController.swift in Sources */,
+				A9FEFC291D41C09F00E830F2 /* Singleton.swift in Sources */,
 				A96F6DBD1D3CB76F00DFC869 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
