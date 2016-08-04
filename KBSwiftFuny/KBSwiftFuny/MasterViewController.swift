@@ -43,7 +43,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     
     func initData() {
         
-        let menus=["设计模式"];
+        let menus=["设计模式","打开KBFuny"];
         
         let sectionInfo = self.fetchedResultsController.sections![0];
         
@@ -165,7 +165,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
             self.navigationController?.pushViewController(KBDesignPatternMenuTableViewController(style:UITableViewStyle.Grouped), animated: true);
             break;
-            
+        case 1:
+            let url=NSURL.init(string: "KBFuny:sourceAppURL=KBSwiftApp")//传入数据，方便回来跳转
+            if(UIApplication.sharedApplication().canOpenURL(url!)==true){//如果报错 则需要设置info.plist 中 LSApplicationQueriesSchemes
+                UIApplication.sharedApplication().openURL(url!)
+            }
+            break;
         default:
             break;
             
