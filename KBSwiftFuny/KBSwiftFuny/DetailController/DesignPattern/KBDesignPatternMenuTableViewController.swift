@@ -41,7 +41,6 @@ class KBDesignPatternMenuTableViewController: UITableViewController {
         super.viewDidLoad()
         title="设计模式列表"
         tableView.tableHeaderView = headView
-        hidesBottomBarWhenPushed = true
      }
     
    var headView:UIView {
@@ -102,6 +101,8 @@ class KBDesignPatternMenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         let rowData = patternMenus[indexPath.section][indexPath.row]
-        self.navigationController?.pushViewController(rowData.classInstanll  ?? RKPatternEmptyViewController(), animated: true)
+        let vc = rowData.classInstanll  ?? RKPatternEmptyViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

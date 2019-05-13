@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--开发技巧-->
+        <!--View Controller-->
         <scene sceneID="TR7-An-Yj3">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="6Zv-PD-gc4" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ll8-dT-nbn"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="开发技巧" id="81b-qq-zUp"/>
+                    <tabBarItem key="tabBarItem" badgeValue="2" systemItem="favorites" id="81b-qq-zUp"/>
                     <navigationItem key="navigationItem" id="CMz-Ru-mya"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jkw-4x-vpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -73,11 +73,11 @@
             </objects>
             <point key="canvasLocation" x="534.78260869565224" y="-822.32142857142856"/>
         </scene>
-        <!--设计模式-->
+        <!--Navigation Controller-->
         <scene sceneID="Cjw-Lh-Usy">
             <objects>
                 <navigationController hidesBottomBarWhenPushed="YES" id="XMe-ID-uKb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="设计模式" id="V1Z-D1-XvX"/>
+                    <tabBarItem key="tabBarItem" badgeValue="1" systemItem="bookmarks" id="V1Z-D1-XvX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mTK-fH-Vg0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
