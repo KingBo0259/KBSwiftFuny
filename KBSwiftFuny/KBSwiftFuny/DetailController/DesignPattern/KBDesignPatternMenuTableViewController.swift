@@ -10,11 +10,27 @@ import UIKit
 
 class KBDesignPatternMenuTableViewController: UITableViewController {
     
+    typealias row = (title:String, classInstanll:UIViewController?)
     let groups = ["创建型模式(5种)","结构型模式（7种）","行为型模式(11种)"]
     
-    let patternMenus = [["工厂方法模式","抽象工厂模式","单例模式","建造者模式","原型模式"]
-                        ,["适配器模式","装饰器模式","代理模式","外观模式","桥接模式","组合模式","享元模式"]
-                        ,["策略模式","模板方法模式","观察者模式","迭代子模式","责任链模式","命令模式","备忘录模式","状态模式","访问者模式","中介者模式","解释器模式"]]
+    let patternMenus : [[row]] = [
+        //frist
+        [("工厂方法模式",SimpleFactoryController()),("抽象工厂模式",RKPatternEmptyViewController()),
+         ("单例模式", SingletonController()),
+         ("建造者模式",nil),
+         ("原型模式",nil)],
+        //second
+        [("适配器模式",nil),
+         ("装饰器模式",nil),
+                    ("代理模式",nil),
+                    ("外观模式",nil),
+                    ("桥接模式",nil),
+                    ("组合模式",nil),
+                    ("享元模式",nil)]
+                    ,
+        //third
+        [("策略模式",nil),("模板方法模式",nil),("观察者模式",nil),("迭代子模式",nil),("责任链模式",nil),("命令模式",nil),("备忘录模式",nil),("状态模式",nil),("访问者模式",nil),("中介者模式",nil),("解释器模式",nil)]
+    ]
     
     let controls:NSArray=[[SimpleFactoryController()],[]]
     required init?(coder aDecoder: NSCoder) {
@@ -24,8 +40,9 @@ class KBDesignPatternMenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title="设计模式列表"
-        tableView.tableHeaderView = headView;
-    }
+        tableView.tableHeaderView = headView
+        hidesBottomBarWhenPushed = true
+     }
     
    var headView:UIView {
     let tempView=UIView()
@@ -70,11 +87,11 @@ class KBDesignPatternMenuTableViewController: UITableViewController {
         let reuseIdentifier = "reuseIdentifier"
         var cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)
         // Configure the cell...
-        if cell==nil {
+        if cell == nil {
             cell = UITableViewCell.init(style: UITableViewCell.CellStyle.value1, reuseIdentifier: reuseIdentifier)
             cell?.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         }
-        cell!.textLabel?.text=patternMenus[indexPath.section][indexPath.row]
+        cell!.textLabel?.text = (patternMenus[indexPath.section][indexPath.row]).title
         return cell!
     }
     
@@ -84,24 +101,7 @@ class KBDesignPatternMenuTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
-        var controller:UIViewController?
-        switch (indexPath.section,indexPath.row) {
-        case (0,0):
-            controller=SimpleFactoryController() //工厂方法
-            break
-        case (0,1):
-            controller=SingletonController()//单例方法
-            break
-        case (1,_):
-            break
-        case (2,_):
-            break
-        default:
-            break
-        }
-        if controller==nil {
-            return
-        }
-        self.navigationController?.pushViewController(controller!, animated: true)
+        let rowData = patternMenus[indexPath.section][indexPath.row]
+        self.navigationController?.pushViewController(rowData.classInstanll  ?? RKPatternEmptyViewController(), animated: true)
     }
 }

@@ -11,8 +11,8 @@ import Foundation
 
 class Singleton {
 
-    var firstName:NSString?
-    var lastName:NSString?
+    var firstName:String = "kingbo"
+    var lastName:String = "bo"
 
     //设置为私有，以确保外部无法初始化
     private init(){}

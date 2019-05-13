@@ -10,6 +10,8 @@
 		A465049922894950007254EF /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A465049822894950007254EF /* Asset.xcassets */; };
 		A465049C22894DEA007254EF /* KBNewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A465049A22894DEA007254EF /* KBNewMain.storyboard */; };
 		A465049E22894F79007254EF /* KBMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465049D22894F79007254EF /* KBMainTabBarController.swift */; };
+		A46504A522896618007254EF /* RKPatternEmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46504A322896618007254EF /* RKPatternEmptyViewController.swift */; };
+		A46504A622896618007254EF /* RKPatternEmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46504A422896618007254EF /* RKPatternEmptyViewController.xib */; };
 		A96F6DB61D3CB76F00DFC869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F6DB51D3CB76F00DFC869 /* AppDelegate.swift */; };
 		A96F6DB91D3CB76F00DFC869 /* KBSwiftFuny.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A96F6DB71D3CB76F00DFC869 /* KBSwiftFuny.xcdatamodeld */; };
 		A96F6DC51D3CB76F00DFC869 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96F6DC31D3CB76F00DFC869 /* LaunchScreen.storyboard */; };
@@ -52,6 +54,8 @@
 		A465049822894950007254EF /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		A465049B22894DEA007254EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/KBNewMain.storyboard; sourceTree = "<group>"; };
 		A465049D22894F79007254EF /* KBMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBMainTabBarController.swift; sourceTree = "<group>"; };
+		A46504A322896618007254EF /* RKPatternEmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RKPatternEmptyViewController.swift; path = DetailController/DesignPattern/RKPatternEmptyViewController.swift; sourceTree = "<group>"; };
+		A46504A422896618007254EF /* RKPatternEmptyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RKPatternEmptyViewController.xib; path = DetailController/DesignPattern/RKPatternEmptyViewController.xib; sourceTree = "<group>"; };
 		A96F6DB21D3CB76F00DFC869 /* KBSwiftFuny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBSwiftFuny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96F6DB51D3CB76F00DFC869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A96F6DB81D3CB76F00DFC869 /* KBSwiftFuny.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KBSwiftFuny.xcdatamodel; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				A96F6DE91D3CBEF300DFC869 /* DesignPattern */,
+				A46504A322896618007254EF /* RKPatternEmptyViewController.swift */,
+				A46504A422896618007254EF /* RKPatternEmptyViewController.xib */,
 			);
 			name = DetailController;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46504A622896618007254EF /* RKPatternEmptyViewController.xib in Resources */,
 				A465049922894950007254EF /* Asset.xcassets in Resources */,
 				A96F6DC51D3CB76F00DFC869 /* LaunchScreen.storyboard in Resources */,
 				A465049C22894DEA007254EF /* KBNewMain.storyboard in Resources */,
@@ -344,6 +351,7 @@
 			files = (
 				A465049E22894F79007254EF /* KBMainTabBarController.swift in Sources */,
 				A96F6DB91D3CB76F00DFC869 /* KBSwiftFuny.xcdatamodeld in Sources */,
+				A46504A522896618007254EF /* RKPatternEmptyViewController.swift in Sources */,
 				A9C9AFEC1D40B57B00B705F9 /* MailFactory.swift in Sources */,
 				A9C9AFD41D3E46ED00B705F9 /* MSNSender.swift in Sources */,
 				A9C9AFD81D3E47E800B705F9 /* SimpleFactory.swift in Sources */,
