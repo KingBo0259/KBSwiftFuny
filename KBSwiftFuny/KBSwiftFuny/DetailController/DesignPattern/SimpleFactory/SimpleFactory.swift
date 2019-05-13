@@ -31,7 +31,7 @@ class SimpleFactory {
     
     
     func senderMessage(messge:String) ->String? {
-      return "简单工厂" + sender.sendMessage(messge)
+        return "简单工厂" + sender.sendMessage(message: messge)
     }
     
 }

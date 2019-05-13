@@ -13,7 +13,7 @@ class SingletonController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title="单例模式"
-        self.view.backgroundColor=UIColor.whiteColor()
+        self.view.backgroundColor=UIColor.white
         
         
         let singleton = Singleton.sharedInstance
