@@ -165,8 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				A96F6DE91D3CBEF300DFC869 /* DesignPattern */,
-				A46504A322896618007254EF /* RKPatternEmptyViewController.swift */,
-				A46504A422896618007254EF /* RKPatternEmptyViewController.xib */,
 			);
 			name = DetailController;
 			sourceTree = "<group>";
@@ -177,6 +175,8 @@
 				A9FEFC271D41C06700E830F2 /* Singleton */,
 				A9C9AFCA1D3E41C400B705F9 /* SimpleFactory */,
 				A96F6DEA1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift */,
+				A46504A322896618007254EF /* RKPatternEmptyViewController.swift */,
+				A46504A422896618007254EF /* RKPatternEmptyViewController.xib */,
 			);
 			name = DesignPattern;
 			sourceTree = "<group>";
