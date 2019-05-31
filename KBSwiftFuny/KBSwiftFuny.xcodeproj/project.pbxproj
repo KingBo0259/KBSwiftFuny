@@ -12,6 +12,7 @@
 		A465049E22894F79007254EF /* KBMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465049D22894F79007254EF /* KBMainTabBarController.swift */; };
 		A46504A522896618007254EF /* RKPatternEmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46504A322896618007254EF /* RKPatternEmptyViewController.swift */; };
 		A46504A622896618007254EF /* RKPatternEmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46504A422896618007254EF /* RKPatternEmptyViewController.xib */; };
+		A4B9217422924CFC003F3849 /* KBSpeechRecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B9217322924CFC003F3849 /* KBSpeechRecognizerViewController.swift */; };
 		A96F6DB61D3CB76F00DFC869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F6DB51D3CB76F00DFC869 /* AppDelegate.swift */; };
 		A96F6DB91D3CB76F00DFC869 /* KBSwiftFuny.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A96F6DB71D3CB76F00DFC869 /* KBSwiftFuny.xcdatamodeld */; };
 		A96F6DC51D3CB76F00DFC869 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96F6DC31D3CB76F00DFC869 /* LaunchScreen.storyboard */; };
@@ -56,6 +57,7 @@
 		A465049D22894F79007254EF /* KBMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBMainTabBarController.swift; sourceTree = "<group>"; };
 		A46504A322896618007254EF /* RKPatternEmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RKPatternEmptyViewController.swift; path = DetailController/DesignPattern/RKPatternEmptyViewController.swift; sourceTree = "<group>"; };
 		A46504A422896618007254EF /* RKPatternEmptyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RKPatternEmptyViewController.xib; path = DetailController/DesignPattern/RKPatternEmptyViewController.xib; sourceTree = "<group>"; };
+		A4B9217322924CFC003F3849 /* KBSpeechRecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KBSpeechRecognizerViewController.swift; path = DetailController/KBSpeechRecognizerViewController.swift; sourceTree = "<group>"; };
 		A96F6DB21D3CB76F00DFC869 /* KBSwiftFuny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBSwiftFuny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96F6DB51D3CB76F00DFC869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A96F6DB81D3CB76F00DFC869 /* KBSwiftFuny.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KBSwiftFuny.xcdatamodel; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4B9217222924CAA003F3849 /* SpeechRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				A4B9217322924CFC003F3849 /* KBSpeechRecognizerViewController.swift */,
+			);
+			name = SpeechRecognizer;
+			sourceTree = "<group>";
+		};
 		A96F6DA91D3CB76F00DFC869 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +174,7 @@
 		A96F6DE81D3CBEE100DFC869 /* DetailController */ = {
 			isa = PBXGroup;
 			children = (
+				A4B9217222924CAA003F3849 /* SpeechRecognizer */,
 				A96F6DE91D3CBEF300DFC869 /* DesignPattern */,
 			);
 			name = DetailController;
@@ -360,6 +371,7 @@
 				A9C9AFE71D40AFA600B705F9 /* Sender.swift in Sources */,
 				A96F6DEB1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift in Sources */,
 				A9C9AFEE1D40B5B600B705F9 /* MSNFacotry.swift in Sources */,
+				A4B9217422924CFC003F3849 /* KBSpeechRecognizerViewController.swift in Sources */,
 				A9FEFC2B1D41C0C300E830F2 /* SingletonController.swift in Sources */,
 				A9C9AFD21D3E466E00B705F9 /* MailSender.swift in Sources */,
 				A9C9AFD61D3E478800B705F9 /* QQSender.swift in Sources */,

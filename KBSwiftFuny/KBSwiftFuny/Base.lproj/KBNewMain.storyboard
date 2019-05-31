@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Speech Recognizer View Controller-->
         <scene sceneID="TR7-An-Yj3">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="6Zv-PD-gc4" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="6Zv-PD-gc4" customClass="KBSpeechRecognizerViewController" customModule="KBSwiftFuny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PI3-Hr-5vE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +22,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" badgeValue="2" systemItem="favorites" id="81b-qq-zUp"/>
                     <navigationItem key="navigationItem" id="CMz-Ru-mya"/>
+                    <connections>
+                        <outlet property="view" destination="PI3-Hr-5vE" id="kLW-Cc-6Gk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jkw-4x-vpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
