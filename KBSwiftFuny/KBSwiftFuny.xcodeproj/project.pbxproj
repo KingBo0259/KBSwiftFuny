@@ -10,6 +10,9 @@
 		0D732277A52088B6605EF6C2 /* Pods_KBSwiftFuny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3938BDAB035D9DB772DB88 /* Pods_KBSwiftFuny.framework */; };
 		7D9DA9CC60335E03A13DDDF0 /* Pods_KBSwiftFunyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CC28067321C7FB12635027 /* Pods_KBSwiftFunyUITests.framework */; };
 		A436645522A1281E00F69421 /* KBFavitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436645422A1281E00F69421 /* KBFavitorViewController.swift */; };
+		A436645922A12C8900F69421 /* KBRxSwiftDemo1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436645722A12C8900F69421 /* KBRxSwiftDemo1ViewController.swift */; };
+		A436645A22A12C8900F69421 /* KBRxSwiftDemo1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A436645822A12C8900F69421 /* KBRxSwiftDemo1ViewController.xib */; };
+		A436645D22A148D900F69421 /* KBRxSwiftDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436645C22A148D900F69421 /* KBRxSwiftDemoModel.swift */; };
 		A465049922894950007254EF /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A465049822894950007254EF /* Asset.xcassets */; };
 		A465049C22894DEA007254EF /* KBNewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A465049A22894DEA007254EF /* KBNewMain.storyboard */; };
 		A465049E22894F79007254EF /* KBMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465049D22894F79007254EF /* KBMainTabBarController.swift */; };
@@ -60,6 +63,10 @@
 		4C3938BDAB035D9DB772DB88 /* Pods_KBSwiftFuny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBSwiftFuny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F04077A0E593814ABBDAEDD /* Pods_KBSwiftFunyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KBSwiftFunyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A436645422A1281E00F69421 /* KBFavitorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KBFavitorViewController.swift; path = DetailController/MainTabs/KBFavitorViewController.swift; sourceTree = "<group>"; };
+		A436645722A12C8900F69421 /* KBRxSwiftDemo1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KBRxSwiftDemo1ViewController.swift; path = DetailController/RxSwiftDemo/KBRxSwiftDemo1ViewController.swift; sourceTree = "<group>"; };
+		A436645822A12C8900F69421 /* KBRxSwiftDemo1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = KBRxSwiftDemo1ViewController.xib; path = DetailController/RxSwiftDemo/KBRxSwiftDemo1ViewController.xib; sourceTree = "<group>"; };
+		A436645C22A148D900F69421 /* KBRxSwiftDemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KBRxSwiftDemoModel.swift; path = DetailController/RxSwiftDemo/ViewModel/KBRxSwiftDemoModel.swift; sourceTree = "<group>"; };
+		A436645E22A148FB00F69421 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A465049822894950007254EF /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		A465049B22894DEA007254EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/KBNewMain.storyboard; sourceTree = "<group>"; };
 		A465049D22894F79007254EF /* KBMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBMainTabBarController.swift; sourceTree = "<group>"; };
@@ -158,6 +165,24 @@
 			name = MainTabs;
 			sourceTree = "<group>";
 		};
+		A436645622A12C5600F69421 /* RxSwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A436645B22A148B100F69421 /* ViewModel */,
+				A436645722A12C8900F69421 /* KBRxSwiftDemo1ViewController.swift */,
+				A436645822A12C8900F69421 /* KBRxSwiftDemo1ViewController.xib */,
+			);
+			name = RxSwiftDemo;
+			sourceTree = "<group>";
+		};
+		A436645B22A148B100F69421 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A436645C22A148D900F69421 /* KBRxSwiftDemoModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		A4B9217222924CAA003F3849 /* SpeechRecognizer */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +218,7 @@
 			children = (
 				A96F6DE81D3CBEE100DFC869 /* DetailController */,
 				A96F6DB51D3CB76F00DFC869 /* AppDelegate.swift */,
+				A436645E22A148FB00F69421 /* PrefixHeader.pch */,
 				A96F6DC31D3CB76F00DFC869 /* LaunchScreen.storyboard */,
 				A96F6DC61D3CB76F00DFC869 /* Info.plist */,
 				A465049822894950007254EF /* Asset.xcassets */,
@@ -224,6 +250,7 @@
 		A96F6DE81D3CBEE100DFC869 /* DetailController */ = {
 			isa = PBXGroup;
 			children = (
+				A436645622A12C5600F69421 /* RxSwiftDemo */,
 				A436645322A127CB00F69421 /* MainTabs */,
 				A4B9217222924CAA003F3849 /* SpeechRecognizer */,
 				A96F6DE91D3CBEF300DFC869 /* DesignPattern */,
@@ -391,6 +418,7 @@
 				A465049922894950007254EF /* Asset.xcassets in Resources */,
 				A96F6DC51D3CB76F00DFC869 /* LaunchScreen.storyboard in Resources */,
 				A465049C22894DEA007254EF /* KBNewMain.storyboard in Resources */,
+				A436645A22A12C8900F69421 /* KBRxSwiftDemo1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,12 +492,16 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KBSwiftFuny/Pods-KBSwiftFuny-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +547,7 @@
 				A9C9AFD81D3E47E800B705F9 /* SimpleFactory.swift in Sources */,
 				A9C9AFF01D40B5F800B705F9 /* QQFactory.swift in Sources */,
 				A96F6DB61D3CB76F00DFC869 /* AppDelegate.swift in Sources */,
+				A436645D22A148D900F69421 /* KBRxSwiftDemoModel.swift in Sources */,
 				A9C9AFE71D40AFA600B705F9 /* Sender.swift in Sources */,
 				A96F6DEB1D3CBF6D00DFC869 /* KBDesignPatternMenuTableViewController.swift in Sources */,
 				A9C9AFEE1D40B5B600B705F9 /* MSNFacotry.swift in Sources */,
@@ -523,6 +556,7 @@
 				A9C9AFD21D3E466E00B705F9 /* MailSender.swift in Sources */,
 				A9C9AFD61D3E478800B705F9 /* QQSender.swift in Sources */,
 				A9C9AFEA1D40B12100B705F9 /* Provider.swift in Sources */,
+				A436645922A12C8900F69421 /* KBRxSwiftDemo1ViewController.swift in Sources */,
 				A9C9AFD01D3E43F800B705F9 /* SenderProtocol.swift in Sources */,
 				A9C9AFDA1D3E4B2300B705F9 /* SimpleFactoryController.swift in Sources */,
 				A9FEFC291D41C09F00E830F2 /* Singleton.swift in Sources */,

@@ -23,6 +23,9 @@ class KBFavitorViewController: UIViewController {
     }
     
     @IBAction func rxSwiftTap(_ sender: Any) {
+        let vc = KBRxSwiftDemo1ViewController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 
