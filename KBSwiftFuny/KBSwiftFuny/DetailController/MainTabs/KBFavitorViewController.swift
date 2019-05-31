@@ -17,7 +17,9 @@ class KBFavitorViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func voiceTap(_ sender: Any) {
-        navigationController?.pushViewController(KBSpeechRecognizerViewController(), animated: true)
+        let vc = KBSpeechRecognizerViewController()
+        vc.hidesBottomBarWhenPushed =  true
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func rxSwiftTap(_ sender: Any) {
