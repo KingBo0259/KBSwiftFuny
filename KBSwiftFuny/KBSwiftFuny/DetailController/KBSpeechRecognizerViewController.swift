@@ -22,6 +22,7 @@ class KBSpeechRecognizerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(beginButton)
+        view.backgroundColor = .white
         
         view.addConstraint(NSLayoutConstraint.init(item: beginButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0))
          view.addConstraint(NSLayoutConstraint.init(item: beginButton, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.0, constant: 0))
@@ -43,4 +44,9 @@ class KBSpeechRecognizerViewController: UIViewController {
             // Fallback on earlier versions
         }
     }
+    @IBAction func rxswiftClick(_ sender: Any) {
+        
+    }
+    
+    
 }

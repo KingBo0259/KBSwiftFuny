@@ -10,25 +10,56 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Speech Recognizer View Controller-->
-        <scene sceneID="TR7-An-Yj3">
+        <!--Navigation Controller-->
+        <scene sceneID="oov-wP-ZBw">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="6Zv-PD-gc4" customClass="KBSpeechRecognizerViewController" customModule="KBSwiftFuny" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PI3-Hr-5vE">
+                <navigationController hidesBottomBarWhenPushed="YES" id="Bh8-Bt-4Ml" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="zdn-T3-IsV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ijU-xr-QKb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kgk-HN-53k" kind="relationship" relationship="rootViewController" id="qVu-Pa-CQf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2XH-xd-I7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446" y="-61"/>
+        </scene>
+        <!--技能列表-->
+        <scene sceneID="uuL-vd-cFk">
+            <objects>
+                <viewController id="kgk-HN-53k" customClass="KBFavitorViewController" customModule="KBSwiftFuny" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sgo-vB-GY2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G87-LA-nFA">
+                                <rect key="frame" x="120" y="161" width="146" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="RXSwift"/>
+                                <connections>
+                                    <action selector="rxSwiftTap:" destination="kgk-HN-53k" eventType="touchUpInside" id="O2r-a3-SqY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maw-8u-1kF">
+                                <rect key="frame" x="120" y="258" width="146" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Voice"/>
+                                <connections>
+                                    <action selector="voiceTap:" destination="kgk-HN-53k" eventType="touchUpInside" id="k7i-pc-vva"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Ll8-dT-nbn"/>
+                        <viewLayoutGuide key="safeArea" id="RbQ-5i-c7a"/>
                     </view>
-                    <tabBarItem key="tabBarItem" badgeValue="2" systemItem="favorites" id="81b-qq-zUp"/>
-                    <navigationItem key="navigationItem" id="CMz-Ru-mya"/>
-                    <connections>
-                        <outlet property="view" destination="PI3-Hr-5vE" id="kLW-Cc-6Gk"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="技能列表" id="AJq-Bf-Lkm"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jkw-4x-vpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Umz-id-mtx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-352" y="-137"/>
+            <point key="canvasLocation" x="488.40579710144931" y="-121.20535714285714"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="3Hm-iw-aQ4">
@@ -104,7 +135,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="XMe-ID-uKb" kind="relationship" relationship="viewControllers" id="GeW-tO-8fF"/>
-                        <segue destination="6Zv-PD-gc4" kind="relationship" relationship="viewControllers" id="01A-F5-HN1"/>
+                        <segue destination="Bh8-Bt-4Ml" kind="relationship" relationship="viewControllers" id="Dep-5r-fBc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I92-Ih-ZoV" userLabel="First Responder" sceneMemberID="firstResponder"/>
